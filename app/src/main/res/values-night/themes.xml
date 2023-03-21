@@ -1,0 +1,65 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.MyApplication" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/red_d</item>
+        <item name="colorOnPrimary">#6ED849</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/polar_night_1</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/snow_storm_3</item>
+    </style>
+
+    <style name="cardView">
+        <item name="android:backgroundTint">@color/teal_700</item>
+    </style>
+
+    <style name="custom">
+        <item name="android:buttonTint">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+   -->
+    <style name="text_box_theme" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColor">@color/snow_storm_3</item>
+        <item name="android:textColorHint">@color/snow_storm_1</item>
+        <item name="placeholderTextColor">@color/frost_4</item>
+        <item name="boxStrokeColor">@color/red_n</item>
+        <item name="hintTextColor">@color/orange</item>
+    </style>
+
+    <style name="radio_and_check_btn_theme">
+        <item name="android:buttonTint">@color/red_n</item>
+    </style>
+
+    <style name="button_theme">
+        <item name="android:textColor">@color/polar_night_2</item>
+        <item name="android:backgroundTint">@color/red_n</item>
+    </style>
+
+    <style name="header_text_view_theme">
+        <item name="android:textColor">@color/frost_1</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="image_button_theme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:tint">@color/snow_storm_3</item>
+    </style>
+
+    <style name="terms_and_condition_theme">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/snow_storm_1</item>
+        <item name="android:textColorLink">@color/frost_4</item>
+    </style>
+
+    <style name="avatar_theme">
+        <item name="android:tint">@color/red_n</item>
+    </style>
+</resources>

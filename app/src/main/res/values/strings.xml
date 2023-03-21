@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="enter_password">Enter password</string>
+    <string name="login">Login</string>
+    <string name="remember_me">Remember me</string>
+    <string name="enter_username">Enter username</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="avatar">avatar</string>
+    <string name="upload">Upload</string>
+    <string name="email_address">Email address</string>
+    <string name="full_name">Full Name</string>
+    <string name="color_option">Color Option</string>
+    <string name="dark">Dark</string>
+    <string name="light">Light</string>
+    <string name="keep_in_touch">Keep in touch</string>
+    <string name="terms_and_condition">By continuing, I agree to the MeroYatra <a href="www.google.com">Terms and Conditions, Privacy Statement</a> and <a href="https://www.google.com">MeroYatra Rewards Terms and Conditions.</a></string>
+    <string name="create_account">Create account</string>
+</resources>

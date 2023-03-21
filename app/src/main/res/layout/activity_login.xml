@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/login_tb"
+            android:layout_width="0dp"
+            android:layout_height="?android:attr/actionBarSize"
+            android:elevation="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/iv_close"
+                style="@style/image_button_theme"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/username"
+                android:src="@drawable/baseline_close_24" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="20dp" />
+
+        <TextView
+            android:id="@+id/create_tv"
+            style="@style/header_text_view_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:foregroundGravity="left"
+            android:gravity="start"
+            android:text="@string/create_an_account"
+            app:layout_constraintBottom_toTopOf="@+id/avatar_iv"
+            app:layout_constraintStart_toStartOf="@id/guideline_1"
+            app:layout_constraintTop_toBottomOf="@+id/login_tb"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <ImageView
+            android:id="@+id/avatar_iv"
+            style="@style/avatar_theme"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginBottom="14dp"
+            android:contentDescription="@string/avatar"
+            android:src="@drawable/baseline_account_circle_24"
+            app:layout_constraintBottom_toTopOf="@+id/upload_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/create_tv" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/upload_btn"
+            style="@style/button_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:text="@string/upload"
+            app:cornerRadius="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/email_et_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/avatar_iv" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_et_label"
+            style="@style/text_box_theme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="19dp"
+            android:hint="@string/email_address"
+            app:layout_constraintBottom_toTopOf="@+id/full_name_et_label"
+            app:layout_constraintEnd_toEndOf="@id/guideline_2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/guideline_1"
+            app:layout_constraintTop_toBottomOf="@+id/upload_btn">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_et"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:inputType="textEmailAddress"
+                android:lines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/full_name_et_label"
+            style="@style/text_box_theme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="19dp"
+            android:hint="@string/full_name"
+            app:layout_constraintBottom_toTopOf="@+id/password_et_label"
+            app:layout_constraintEnd_toEndOf="@id/guideline_2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/guideline_1"
+            app:layout_constraintTop_toBottomOf="@+id/email_et_label"
+            app:placeholderTextColor="@color/red_d">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/full_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:inputType="text"
+                android:lines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_et_label"
+            style="@style/text_box_theme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="19dp"
+            android:hint="@string/password"
+            app:endIconMode="password_toggle"
+            app:layout_constraintBottom_toTopOf="@+id/radio_grp"
+            app:layout_constraintEnd_toEndOf="@id/guideline_2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/guideline_1"
+            app:layout_constraintTop_toBottomOf="@+id/full_name_et_label">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_et"
+                style="@style/text_box_theme"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:inputType="textPassword"
+                android:lines="1" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/radio_grp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:checkedButton="@id/radio_light"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/kit_cb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password_et_label"
+            app:layout_constraintVertical_bias="0.5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/color_option" />
+
+            <RadioButton
+                android:id="@+id/radio_dark"
+                style="@style/radio_and_check_btn_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dark" />
+
+            <RadioButton
+                android:id="@+id/radio_light"
+                style="@style/radio_and_check_btn_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/light" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/kit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:text="@string/keep_in_touch"
+            app:layout_constraintStart_toStartOf="@id/guideline_1"
+            app:layout_constraintTop_toBottomOf="@id/radio_grp" />
+
+        <CheckBox
+            android:id="@+id/kit_cb"
+            style="@style/radio_and_check_btn_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:layout_marginBottom="14dp"
+            android:checked="true"
+            app:layout_constraintStart_toStartOf="@id/guideline_1"
+            app:layout_constraintTop_toBottomOf="@id/kit_tv">
+
+        </CheckBox>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/terms_nd_cond"
+            style="@style/terms_and_condition_theme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="@string/terms_and_condition"
+            app:layout_constraintBottom_toTopOf="@+id/materialButton"
+            app:layout_constraintEnd_toEndOf="@id/guideline_2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/guideline_1"
+            app:layout_constraintTop_toBottomOf="@+id/kit_cb" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButton"
+            style="@style/button_theme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/create_account"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline_2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/guideline_1"
+            app:layout_constraintTop_toBottomOf="@+id/terms_nd_cond" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
