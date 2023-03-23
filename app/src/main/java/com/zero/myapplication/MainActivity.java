@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
         close.setOnClickListener(view -> {
             finish();
-            System.exit(0);
         });
 
         upload_btn.setOnClickListener(view -> openGallery());
